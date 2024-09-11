@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --background-color: #172039;
+    --text-color: #e3ebf0;
+    --title-color:#7766ce;
+    --primary-color: #4da0d9;
+    --secondary-color: #887af3;
+    --name-color: #ebee38;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    font-family: 'Archivo Black';
+}
+
+header li a {
+    font-family: 'roboto', sans-serif;
+}
+
+header,
+header a {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    padding-right: 17px;
+    padding-bottom: 15px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+header nav li {
+    display: inline;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+#howToPlay .container h2, 
+#skills .container h2 {
+    color: var(--title-color);
+    font-size: 40px;
+    font-family: 'roboto';
+    padding: 10px 5px;
+}
+
+#howToPlay .container {
+    color: var(--text-color);
+    font-family: 'roboto';
+    font-size: 20px;
+}
+
+.emphasis {
+    color: var(--secondary-color);
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.name {
+    color: var(--name-color);
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    border: solid var(--name-color);
+    max-width: 600px;
+    width: 100%;
+    padding: 10px;
+}
+
+.box h3 {
+    color: var(--title-color);
+    font-family: 'roboto';
+    position: relative;
+    left: 60px;
+    bottom: 30px ;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.box img {
+    height: 45px;
+    width: 45px;
+    border: solid var(--secondary-color);
+    border-radius: 50%
+}
+
+.box p {
+    color: var(--text-color);
+    font-family: 'roboto';
+    font-size: 15px;
+}
+
