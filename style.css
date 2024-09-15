@@ -7,10 +7,16 @@
 :root {
     --background-color: #172039;
     --text-color: #e3ebf0;
-    --title-color:#7766ce;
+    --title-color: #7766ce;
     --primary-color: #4da0d9;
     --secondary-color: #887af3;
     --name-color: #ebee38;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
 }
 
 .container {
@@ -19,51 +25,39 @@
     margin: 0 auto;
 }
 
-header {
-    font-family: 'Archivo Black';
-}
-
-header li a {
-    font-family: 'roboto', sans-serif;
-}
-
-header,
-header a {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    text-decoration: none;
-    padding-right: 17px;
-    padding-bottom: 15px;
-    font-size: 24px;
-    font-weight: 800;
-}
-
-header nav li {
-    display: inline;
-}
-
-header .container {
+header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 20px;
 }
 
-body {
-    background-color: var(--background-color);
-}
-
-#howToPlay .container h2, 
-#skills .container h2 {
-    color: var(--title-color);
-    font-size: 40px;
-    font-family: 'roboto';
-    padding: 10px 5px;
-}
-
-#howToPlay .container {
+header h1 {
+    font-family: 'Archivo Black', sans-serif;
     color: var(--text-color);
-    font-family: 'roboto';
-    font-size: 20px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--title-color);
+    font-size: 36px;
+    margin: 20px 0;
 }
 
 .emphasis {
@@ -78,42 +72,169 @@ body {
     font-weight: 600;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    border: solid var(--name-color);
-    max-width: 600px;
-    width: 100%;
-    padding: 10px;
-}
-
-.box h3 {
-    color: var(--title-color);
-    font-family: 'roboto';
-    position: relative;
-    left: 60px;
-    bottom: 30px ;
+.item {
+    color: #6d1717;
     font-size: 21px;
     font-weight: 600;
 }
 
-.box img {
-    height: 45px;
-    width: 45px;
-    border: solid var(--secondary-color);
-    border-radius: 50%
+#howToPlay p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--primary-color);
 }
 
-.box p {
-    color: var(--text-color);
-    font-family: 'roboto';
-    font-size: 15px;
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.skills .box {
+    background-color: #1e2a4a;
+    padding: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+.skills .box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+}
+
+.skills .box h3 {
+    margin: 10px 0;
+    color: var(--title-color);
+    font-size: 24px;
+}
+
+.skills .box p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.skills .box:nth-child(5) {
+    grid-column: span 2;
+    text-align: center;
+}
+
+#builds li {
+    display: flex;
+    justify-content: center;
+}
+
+#builds ul {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+#builds .box img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+}
+
+#builds ul p {
+    position: relative;
+    top: 80px;
+    right: 70px;
+}
+
+#builds p {
+    color: var(--primary-color);
+    font-size: 20px;
+    position: relative;
+    top: 80px;
+}
+
+#finaly .container{
+    color: var(--primary-color);
+    font-size: 20px;
+    position: relative;
+    top: 80px;
+}
+
+#recommendation {
+    position: relative;
+    top: 80px;
+}
+
+form input,
+form textarea,
+form button {
+    width: 320px;
+    display: block;
+    margin-bottom: 8px;
+    padding: 8px;
+    resize: none;
+    border: solid 2px var(--secondary-color);
+}
+
+form input:hover,
+form textarea:hover,
+form button:hover {
+    width: 320px;
+    display: block;
+    margin-bottom: 8px;
+    padding: 8px;
+    resize: none;
+    border: solid 2px var(--name-color);
+    cursor: pointer;
+}
+
+form button {
+    background: var(--primary-color);
+    color: #e3ebf0;
+    border: none;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+footer{
+    background-color:  var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 64px 80px;
+    position: relative;
+    top: 100px;
+    font-size: 30px;
+}
+
+footer img,
+footer .titulo {
+    display: block;
+    font-weight:600;
+    margin-bottom: 24px;
+    
+}
+
+footer nav a {
+    color: #263138;
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+
+footer p a {
+    color: var(--name-color);
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+    max-width: 350px;
+    
+}
+
+#copyright{
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 24px;
 }
 
